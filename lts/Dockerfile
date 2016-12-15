@@ -39,10 +39,11 @@ RUN export BUILD_DEPS="git \
                 ${BUILD_DEPS} \
     && wget https://nodejs.org/dist/${NODE_VER}/node-${NODE_VER}.tar.gz -O /tmp/node-${NODE_VER}.tar.gz \
     && wget https://nodejs.org/dist/${NODE_VER}/SHASUMS256.txt.asc -O /tmp/SHASUMS256.txt.asc \
+    && cd /tmp \
     && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys ${NODE_GPG} \
-    && gpg --batch --verify /tmp/SHASUMS256.txt.asc /tmp/node-${NODE_VER}.tar.gz \
-    && grep node-${NODE_VER}.tar.gz /tmp/SHASUMS256.txt.asc | sha256sum -c - \
-    && tar xzf /tmp/node-${NODE_VER}.tar.gz -C /tmp/ \
+    && gpg --verify SHASUMS256.txt.asc \
+    && grep node-${NODE_VER}.tar.gz SHASUMS256.txt.asc | sha256sum -c - \
+    && tar xzf /tmp/node-${NODE_VER}.tar.gz \
     && cd /tmp/node-${NODE_VER} \
     && NB_CORES=${CORES_BUILD-$(grep -c ^processor /proc/cpuinfo 2> /dev/null || 1)} \
     && ./configure --prefix=/usr \
