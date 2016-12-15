@@ -17,7 +17,7 @@ ARG NODE_GPG="9554F04D7259F04124DE6B476D5A82AC7E37093B \
 
 LABEL description="nodejs based on alpine" \
       tags="latest 7.2.1 7.2 7" \
-      build_ver="2016121501"
+      build_ver="2016121502"
 
 ENV UID=991 \
     GID=991
