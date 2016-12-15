@@ -21,12 +21,12 @@ Node.js internally uses the Google V8 JavaScript engine to execute code; a large
 ## Build Image
 
 ```shell
-docker build -t xataz/node:6 github.com/xataz/dockerfiles.git#master:node/latest
+docker build -t xataz/node github.com/xataz/docker-node#master:latest
 ```
 
 ### Build other version
 ```shell
-docker build -t xataz/node:5.9.0 --build-arg NODE_VER=5.9.0 github.com/xataz/dockerfiles.git#master:node/latest
+docker build -t xataz/node:5.9.0 --build-arg NODE_VER=5.9.0 github.com/xataz/docker-node#master:latest
 ```
 
 ## Usage
