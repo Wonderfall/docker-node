@@ -1,7 +1,7 @@
 FROM xataz/alpine:3.4
 MAINTAINER xataz <https://github.com/xataz/>
 
-ARG NODE_VER=v7.2.1
+ARG NODE_VER=v7.3.0
 ARG NPM_VER=3
 ARG CORES_BUILD
 ARG NODE_CONFIG="--fully-static \
@@ -16,8 +16,8 @@ ARG NODE_GPG="9554F04D7259F04124DE6B476D5A82AC7E37093B \
             B9AE9905FFD7803F25714661B63B535A4C206CA9"
 
 LABEL description="nodejs based on alpine" \
-      tags="latest 7.2.1 7.2 7" \
-      build_ver="2016121502"
+      tags="latest 7.3.0 7.3 7" \
+      build_ver="2016122601"
 
 ENV UID=991 \
     GID=991

@@ -46,12 +46,14 @@ f_maj_readme() {
 
 
 if [ "${VERSION_NODE_LATEST}" != "${NEW_VERSION_NODE_LATEST}" ]; then
+    echo "Upgrade ${VERSION_NODE_LATEST} to ${NEW_VERSION_NODE_LATEST}"
     f_gen_tag latest ${NEW_VERSION_NODE_LATEST}
     f_maj_dockerfile latest ${VERSION_NODE_LATEST} ${NEW_VERSION_NODE_LATEST}
     f_maj_readme latest
 fi
 
 if [ "${VERSION_NODE_LTS}" != "${NEW_VERSION_NODE_LTS}" ]; then
+    echo "Upgrade ${VERSION_NODE_LTS} to ${NEW_VERSION_NODE_LTS}"
     f_gen_tag lts ${NEW_VERSION_NODE_LTS}
     f_maj_dockerfile lts ${VERSION_NODE_LTS} ${NEW_VERSION_NODE_LTS}
     f_maj_readme lts
