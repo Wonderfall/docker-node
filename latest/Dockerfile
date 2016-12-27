@@ -1,4 +1,4 @@
-FROM xataz/alpine:3.4
+FROM xataz/alpine:3.5
 MAINTAINER xataz <https://github.com/xataz/>
 
 ARG NODE_VER=v7.3.0
@@ -17,7 +17,7 @@ ARG NODE_GPG="9554F04D7259F04124DE6B476D5A82AC7E37093B \
 
 LABEL description="nodejs based on alpine" \
       tags="latest 7.3.0 7.3 7" \
-      build_ver="2016122601"
+      build_ver="2016122701"
 
 ENV UID=991 \
     GID=991
