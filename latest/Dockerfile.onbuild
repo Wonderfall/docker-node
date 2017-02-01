@@ -1,9 +1,9 @@
-FROM xataz/node:7.4.0
+FROM xataz/node:7.5.0
 MAINTAINER xataz <https://github.com/xataz/>
 
 LABEL description="nodejs based on alpine" \
-      tags="onbuild latest-onbuild 7.4.0-onbuild 7.4-onbuild 7-onbuild" \
-      build_ver="2017010701"
+      tags="onbuild latest-onbuild 7.5.0-onbuild 7.5-onbuild 7-onbuild" \
+      build_ver="2017020101"
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
