@@ -27,36 +27,48 @@ push() {
 # Build node
 ## Latest
 for tag in $(grep 'tags=' $FOLDER/latest/Dockerfile | cut -d'"' -f2); do
-    docker build -t xataz/node:$tag $FOLDER/latest/
+    echo "build xataz/node:$tag ..."
+    docker build -t xataz/node:$tag $FOLDER/latest/ > /tmp/build.log
     if [ $? == 0 ]; then
+        echo "build xataz/node:$tag done"
         docker push "xataz/node:$tag"
     else
+        cat /tmp/build.log
         exit 1
     fi
 done
 for tag in $(grep 'tags=' $FOLDER/latest/Dockerfile.onbuild | cut -d'"' -f2); do
-    docker build -t xataz/node:$tag -f $FOLDER/latest/Dockerfile.onbuild $FOLDER/latest/
+    echo "build xataz/node:$tag ..."
+    docker build -t xataz/node:$tag -f $FOLDER/latest/Dockerfile.onbuild $FOLDER/latest/ > /tmp/build.log
     if [ $? == 0 ]; then
+        echo "build xataz/node:$tag done"
         docker push "xataz/node:$tag"
     else
+        cat /tmp/build.log
         exit 1
     fi
 done
 
 ## LTS
 for tag in $(grep 'tags=' $FOLDER/lts/Dockerfile | cut -d'"' -f2); do
-    docker build -t xataz/node:$tag $FOLDER/lts/
+    echo "build xataz/node:$tag ..."
+    docker build -t xataz/node:$tag $FOLDER/lts/ > /tmp/build.log
     if [ $? == 0 ]; then
+        echo "build xataz/node:$tag done"
         docker push "xataz/node:$tag"
     else
+        cat /tmp/build.log
         exit 1
     fi
 done
 for tag in $(grep 'tags=' $FOLDER/lts/Dockerfile.onbuild | cut -d'"' -f2); do
-    docker build -t xataz/node:$tag -f $FOLDER/lts/Dockerfile.onbuild $FOLDER/lts/
+    echo "build xataz/node:$tag ..."
+    docker build -t xataz/node:$tag -f $FOLDER/lts/Dockerfile.onbuild $FOLDER/lts/ > /tmp/build.log
     if [ $? == 0 ]; then
+        echo "build xataz/node:$tag done"
         docker push "xataz/node:$tag"
     else
+        cat /tmp/build.log
         exit 1
     fi
 done
