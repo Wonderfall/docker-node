@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: xataz/drone-docker:1.13.1
+    image: xataz/docker-client:1.13.1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/docker/.docker/config.json:/root/.docker/config.json
