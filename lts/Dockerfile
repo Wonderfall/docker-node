@@ -1,5 +1,4 @@
 FROM xataz/alpine:3.5
-MAINTAINER xataz <https://github.com/xataz/>
 
 ARG NODE_VER=v6.9.5
 ARG NPM_VER=3
@@ -17,7 +16,8 @@ ARG NODE_GPG="9554F04D7259F04124DE6B476D5A82AC7E37093B \
 
 LABEL description="nodejs based on alpine" \
       tags="lts 6.9.5 6.9 6" \
-      build_ver="2017020101"
+      maintainer="xataz <https://github.com/xataz>" \
+      build_ver="2017021201"
 
 ENV UID=991 \
     GID=991
