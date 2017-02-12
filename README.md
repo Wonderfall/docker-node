@@ -1,5 +1,7 @@
 ![](https://i.goopics.net/lq.png)
 
+[![Build Status](https://drone.xataz.net/api/badges/xataz/docker-node/status.svg)](https://drone.xataz.net/xataz/docker-node)
+
 > This image is build and push with [drone.io](https://github.com/drone/drone), a circle-ci like self-hosted.
 > If you don't trust, you can build yourself.
 
