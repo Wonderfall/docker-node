@@ -1,6 +1,6 @@
 FROM xataz/alpine:3.5
 
-ARG NODE_VER=v7.5.0
+ARG NODE_VER=v7.6.0
 ARG NPM_VER=3
 ARG CORES_BUILD
 ARG NODE_CONFIG="--fully-static \
@@ -15,9 +15,9 @@ ARG NODE_GPG="9554F04D7259F04124DE6B476D5A82AC7E37093B \
             B9AE9905FFD7803F25714661B63B535A4C206CA9"
 
 LABEL description="nodejs based on alpine" \
-      tags="latest 7.5.0 7.5 7" \
+      tags="latest 7.6.0 7.6 7" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="2017021201"
+      build_ver="2017022801"
 
 ENV UID=991 \
     GID=991
