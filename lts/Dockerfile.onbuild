@@ -1,9 +1,9 @@
-FROM xataz/node:6.10.1
+FROM xataz/node:6.10.2
 
 LABEL description="nodejs based on alpine" \
-      tags="lts-onbuild 6.10.1-onbuild 6.10-onbuild 6-onbuild" \
+      tags="lts-onbuild 6.10.2-onbuild 6.10-onbuild 6-onbuild" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="2017032801"
+      build_ver="2017041301"
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
