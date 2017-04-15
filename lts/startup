@@ -1,6 +1,6 @@
 #!/bin/sh
 
-chown ${UID}:${GID} .
+chown ${UID}:${GID} *
 
 if [ '$@' == '' ]; then
     exec su-exec ${UID}:${GID} /sbin/tini -- node -v
